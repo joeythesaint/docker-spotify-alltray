@@ -16,10 +16,15 @@ Run Spotify inside an isolated [Docker](http://www.docker.io) container. This is
   sudo docker build -t spotify .
   ```
 
-3. Run the provided spotify script:
+3. Run the container with the appropriate volume mappings:
 
   ```sh
-  scripts/spotify
+  docker run --rm --name spotify \
+		-v /tmp/.X11-unix:/tmp/.X11-unix:ro \
+		-v /run/user/$(id -u)/pulse:/run/pulse:ro \
+		-v ${HOME}/.spotify/config:/data/config \
+		-v ${HOME}/.spotify/cache:/data/cache \
+		--device /dev/dri spotify
   ```
 
 4. Use Spotify.

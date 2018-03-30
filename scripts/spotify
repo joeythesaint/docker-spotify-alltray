@@ -1,0 +1,7 @@
+#!/bin/bash
+/usr/bin/docker run -d --rm --name spotify \
+            -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
+            -v /run/user/$(id -u)/pulse:/run/pulse:ro \
+            -v ${HOME}/.spotify/config:/data/config \
+            -v ${HOME}/.spotify/cache:/data/cache \
+            --device /dev/dri spotify

@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-MAINTAINER Terje Larsen
+MAINTAINER Joe MacDonald <joe@deserted.net>
 
 # Install Spotify and PulseAudio.
 WORKDIR /usr/src

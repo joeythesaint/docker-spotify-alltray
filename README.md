@@ -2,12 +2,14 @@
 
 Run Spotify inside an isolated [Docker](http://www.docker.io) container. This is achieved by sharing a socket for X11 and PulseAudio.
 
+Originally based on Terje Larsen's work from https://github.com/terlar/docker-spotify-pulseaudio.git
+
 ## Instructions
 
 1. Clone this repository and change to the directory:
 
   ```sh
-  git clone https://github.com/terlar/docker-spotify-pulseaudio.git && cd docker-spotify-pulseaudio
+  git clone https://github.com/joeythesaint/docker-spotify-alltray.git && cd docker-spotify-alltray
   ```
 
 2. Build the container:
